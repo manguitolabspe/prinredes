@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-red: #DC2626;
+  --color-brand-dark: #0F172A;
+  --color-brand-light: #F8FAFC;
+  --color-brand-accent: #3B82F6;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-light text-brand-dark font-sans antialiased;
+  }
+
+  /* Custom Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9; /* slate-100 */
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* slate-300 */
+    border-radius: 10px;
+    border: 2px solid #f1f5f9; /* create gap effect */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #dc2626; /* brand-red */
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #e2e8f0 transparent;
+  }
+}
+
+@layer components {
+  .modern-card {
+    @apply bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all hover:shadow-md hover:border-brand-accent/20;
+  }
+  
+  .modern-title {
+    @apply text-2xl md:text-4xl font-black text-slate-900 tracking-tight leading-[1.1] uppercase italic mb-4;
+  }
+  
+  .modern-subtitle {
+    @apply text-lg font-medium text-slate-500 tracking-wide uppercase;
+  }
+  
+  .glass-header {
+    @apply bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50;
+  }
+
+  .luxury-glow {
+    text-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+}
+
