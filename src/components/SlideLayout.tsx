@@ -63,7 +63,7 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
   const renderStats = () => {
     if (!slide.stats) return null;
     return (
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 px-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-8 px-4 md:px-8">
         {slide.stats.map((stat, idx) => (
           <motion.div
             key={idx}
@@ -103,9 +103,9 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
       <motion.div
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
-        className="mt-8 px-8"
+        className="mt-6 md:mt-8 px-4 md:px-8"
       >
-        <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-2xl relative overflow-hidden group">
+        <div className="bg-slate-900 rounded-[2rem] p-5 md:p-6 border border-slate-800 shadow-2xl relative overflow-hidden group">
           <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
             <Cpu size={80} className="text-brand-red" />
           </div>
@@ -138,9 +138,9 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
     const activeDayData = slide.calendarData.find(d => d.day === selectedDay);
 
     return (
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 px-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 md:px-8">
         {/* Calendar Grid */}
-        <div className="lg:col-span-7 bg-white border border-slate-100 rounded-3xl p-6 shadow-sm">
+        <div className="lg:col-span-7 bg-white border border-slate-100 rounded-[2rem] p-5 md:p-6 shadow-sm">
           <div className="mb-6">
             <h3 className="text-sm font-black text-slate-900 uppercase tracking-widest flex items-center gap-2">
               <Calendar size={16} className="text-brand-red" />
@@ -148,7 +148,7 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
             </h3>
           </div>
 
-          <div className="w-[300px] mx-auto lg:mx-0">
+          <div className="max-w-[300px] mx-auto lg:mx-0">
             {/* Weekday Labels Grid */}
             <div className="grid grid-cols-7 gap-2 mb-2">
               {['L', 'M', 'M', 'J', 'V', 'S', 'D'].map((d, i) => (
@@ -262,20 +262,20 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
   };
 
   const renderHero = () => (
-    <div className="flex flex-col items-center justify-center min-h-[500px] text-center px-12 relative overflow-hidden">
+    <div className="flex flex-col items-center justify-center min-h-[400px] md:min-h-[500px] text-center px-6 md:px-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.05)_0%,transparent_70%)]" />
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", stiffness: 100 }}
-        className="w-32 h-32 bg-slate-950 rounded-full flex items-center justify-center mb-12 relative border-4 border-brand-red shadow-[0_0_50px_rgba(239,68,68,0.3)]"
+        className="w-24 h-24 md:w-32 md:h-32 bg-slate-950 rounded-full flex items-center justify-center mb-10 md:mb-12 relative border-4 border-brand-red shadow-[0_0_50px_rgba(239,68,68,0.3)]"
       >
-        <Zap size={64} className="text-brand-red animate-pulse" />
+        <Zap size={48} className="md:size-[64px] text-brand-red animate-pulse" />
       </motion.div>
       <motion.h1 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-5xl md:text-7xl font-black text-slate-950 mb-6 tracking-tighter"
+        className="text-3xl md:text-7xl font-black text-slate-950 mb-6 tracking-tighter uppercase"
       >
         {slide.title}
       </motion.h1>
@@ -283,7 +283,7 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="text-xl md:text-2xl font-bold text-slate-500 uppercase tracking-[0.3em] mb-12"
+        className="text-sm md:text-2xl font-bold text-slate-500 uppercase tracking-[0.2em] md:tracking-[0.3em] mb-10 md:mb-12"
       >
         {slide.subtitle}
       </motion.p>
@@ -291,9 +291,9 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
-        className="bg-white border border-slate-100 p-8 rounded-3xl shadow-xl max-w-2xl"
+        className="bg-white border border-slate-100 p-6 md:p-8 rounded-[2rem] shadow-xl max-w-2xl mx-4"
       >
-        <p className="text-lg text-slate-600 font-medium leading-relaxed italic">
+        <p className="text-base md:text-lg text-slate-600 font-medium leading-relaxed italic">
           "{typeof slide.content === 'string' ? slide.content : 'Iniciando Despliegue de Inteligencia'}"
         </p>
       </motion.div>
@@ -301,25 +301,25 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
   );
 
   const renderVersus = () => (
-    <div className="px-8 py-12">
+    <div className="px-4 md:px-8 py-8 md:py-12">
       {renderStats()}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-stretch">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          className="bg-slate-50 rounded-3xl p-10 border border-slate-200 opacity-60 hover:opacity-100 transition-opacity"
+          className="bg-slate-50 rounded-[2rem] p-6 md:p-10 border border-slate-200 opacity-60 hover:opacity-100 transition-opacity"
         >
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-12 bg-slate-200 rounded-2xl flex items-center justify-center text-slate-500">
-              <Activity size={24} />
+          <div className="flex items-center gap-4 mb-6 md:mb-8">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-slate-200 rounded-xl md:rounded-2xl flex items-center justify-center text-slate-500">
+              <Activity size={20} className="md:size-[24px]" />
             </div>
-            <h3 className="text-xl font-black text-slate-400 uppercase tracking-widest">Maquinaria Tradicional</h3>
+            <h3 className="text-lg md:text-xl font-black text-slate-400 uppercase tracking-widest">Tradicional</h3>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             {Array.isArray(slide.content) && slide.content.slice(0, 1).map((item: any, i: number) => (
               <div key={i}>
-                <p className="text-3xl font-black text-slate-300 mb-4 tracking-tight leading-none line-through">{item.label}</p>
-                <p className="text-slate-400 font-medium italic">{item.text}</p>
+                <p className="text-2xl md:text-3xl font-black text-slate-300 mb-3 md:mb-4 tracking-tight leading-none line-through uppercase">{item.label}</p>
+                <p className="text-slate-400 font-medium italic text-sm">{item.text}</p>
               </div>
             ))}
           </div>
@@ -328,26 +328,26 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          className="bg-slate-950 rounded-3xl p-10 border border-brand-red shadow-2xl relative overflow-hidden"
+          className="bg-slate-950 rounded-[2rem] p-6 md:p-10 border border-brand-red shadow-2xl relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 p-8 opacity-10">
+          <div className="absolute top-0 right-0 p-8 opacity-10 hidden md:block">
             <Zap size={120} className="text-brand-red" />
           </div>
-          <div className="flex items-center gap-4 mb-8 relative z-10">
-            <div className="w-12 h-12 bg-brand-red rounded-2xl flex items-center justify-center text-white shadow-[0_0_20px_rgba(239,68,68,0.5)]">
-              <Zap size={24} />
+          <div className="flex items-center gap-4 mb-6 md:mb-8 relative z-10">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-red rounded-xl md:rounded-2xl flex items-center justify-center text-white shadow-[0_0_20px_rgba(239,68,68,0.5)]">
+              <Zap size={20} className="md:size-[24px]" />
             </div>
-            <h3 className="text-xl font-black text-white uppercase tracking-widest luxury-glow">Estrategia Asimétrica</h3>
+            <h3 className="text-lg md:text-xl font-black text-white uppercase tracking-widest luxury-glow">Asimétrica</h3>
           </div>
-          <div className="space-y-12 relative z-10">
+          <div className="space-y-8 md:space-y-12 relative z-10">
             {Array.isArray(slide.content) && slide.content.slice(1).map((item: any, i: number) => (
               <div key={i} className="group">
                 <div className="flex items-center gap-3 mb-2">
-                   <div className="w-6 h-1 bg-brand-red rounded-full" />
-                   <p className="text-xs font-black text-brand-red uppercase tracking-widest">ACTUALIZACIÓN INTEL</p>
+                   <div className="w-4 h-1 bg-brand-red rounded-full" />
+                   <p className="text-[10px] font-black text-brand-red uppercase tracking-widest">INTEL</p>
                 </div>
-                <p className="text-3xl font-black text-white mb-4 tracking-tight leading-none group-hover:text-brand-red transition-colors">{item.label}</p>
-                <p className="text-slate-400 font-medium leading-relaxed">{item.text}</p>
+                <p className="text-2xl md:text-3xl font-black text-white mb-3 md:mb-4 tracking-tight leading-none group-hover:text-brand-red transition-colors uppercase">{item.label}</p>
+                <p className="text-slate-400 font-medium leading-relaxed text-sm">{item.text}</p>
               </div>
             ))}
           </div>
@@ -357,9 +357,9 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
   );
 
   const renderTargetProfiles = () => (
-    <div className="px-8 py-12">
+    <div className="px-4 md:px-8 py-8 md:py-12">
       {renderStats()}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {Array.isArray(slide.content) && slide.content.map((profile: any, i: number) => (
           <motion.div
             key={i}
@@ -368,26 +368,26 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
             transition={{ delay: i * 0.2 }}
             className="group"
           >
-            <div className="bg-white border border-slate-100 rounded-3xl p-8 hover:bg-slate-950 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-full -mr-16 -mt-16 group-hover:bg-brand-red/10 transition-colors" />
-              <div className="mb-8 relative z-10">
-                <div className="w-16 h-16 bg-slate-50 text-slate-400 rounded-2xl flex items-center justify-center group-hover:bg-brand-red group-hover:text-white transition-all duration-500 shadow-sm group-hover:shadow-brand-red/30">
+            <div className="bg-white border border-slate-100 rounded-[2rem] p-6 md:p-8 hover:bg-slate-950 transition-all duration-500 md:hover:-translate-y-2 relative overflow-hidden group h-full flex flex-col">
+              <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-slate-50 rounded-full -mr-12 -mt-12 md:-mr-16 md:-mt-16 group-hover:bg-brand-red/10 transition-colors" />
+              <div className="mb-6 md:mb-8 relative z-10">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-slate-50 text-slate-400 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-brand-red group-hover:text-white transition-all duration-500 shadow-sm group-hover:shadow-brand-red/30">
                   {(() => {
                     const ContextIcon = getContextualIcon(profile.label, Target);
-                    return <ContextIcon size={32} />;
+                    return <ContextIcon size={24} className="md:size-[32px]" />;
                   })()}
                 </div>
               </div>
-              <div className="relative z-10">
-                <h3 className="text-2xl font-black text-slate-950 group-hover:text-white mb-4 tracking-tight uppercase tracking-widest">{profile.label}</h3>
-                <div className="w-12 h-1 bg-slate-100 group-hover:bg-brand-red mb-6 transition-colors" />
-                <p className="text-slate-500 group-hover:text-slate-400 font-medium leading-relaxed pr-4">
+              <div className="relative z-10 flex-1">
+                <h3 className="text-xl md:text-2xl font-black text-slate-950 group-hover:text-white mb-3 md:mb-4 tracking-tight uppercase tracking-widest">{profile.label}</h3>
+                <div className="w-10 h-1 bg-slate-100 group-hover:bg-brand-red mb-4 md:mb-6 transition-colors" />
+                <p className="text-sm md:text-base text-slate-500 group-hover:text-slate-400 font-medium leading-relaxed pr-2">
                   {profile.text}
                 </p>
               </div>
-              <div className="mt-8 pt-8 border-t border-slate-50 group-hover:border-slate-800 flex items-center justify-between relative z-10">
-                 <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest group-hover:text-brand-red transition-colors">Voto Estratégico</span>
-                 <Users size={16} className="text-slate-200 group-hover:text-slate-700 transition-colors" />
+              <div className="mt-8 pt-6 border-t border-slate-50 group-hover:border-slate-800 flex items-center justify-between relative z-10">
+                 <span className="text-[9px] md:text-[10px] font-black text-slate-300 uppercase tracking-widest group-hover:text-brand-red transition-colors">Voto Estratégico</span>
+                 <Users size={14} className="text-slate-200 group-hover:text-slate-700 transition-colors" />
               </div>
             </div>
           </motion.div>
@@ -397,9 +397,9 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
   );
 
   const renderArchitecture = () => (
-    <div className="px-8 py-12">
+    <div className="px-4 md:px-8 py-8 md:py-12">
       {renderStats()}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {Array.isArray(slide.content) && slide.content.map((pillar: any, i: number) => (
           <motion.div
             key={i}
@@ -408,15 +408,17 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
             transition={{ delay: i * 0.1 }}
             className="flex flex-col"
           >
-            <div className="bg-white border border-slate-100 rounded-3xl p-6 h-full flex flex-col items-center text-center hover:bg-slate-950 transition-all duration-300 group">
-              <div className="mb-8 p-4 bg-slate-50 rounded-2xl group-hover:bg-brand-red transition-colors">
+            <div className="bg-white border border-slate-100 rounded-[2rem] p-5 md:p-6 h-full flex flex-col items-center text-center hover:bg-slate-950 transition-all duration-300 group">
+              <div className="mb-6 md:mb-8 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl group-hover:bg-brand-red transition-colors text-slate-400 group-hover:text-white">
                 {(() => {
                   const ContextIcon = getContextualIcon(pillar.label, Database);
-                  return <ContextIcon size={24} className="group-hover:text-white" />;
+                  return <ContextIcon size={20} className="md:size-[24px]" />;
                 })()}
               </div>
-              <h3 className="text-[10px] font-black text-brand-red uppercase tracking-[0.3em] mb-4 bg-brand-red/10 px-3 py-1 rounded-full">{pillar.label}</h3>
-              <p className="text-sm font-bold text-slate-950 group-hover:text-white leading-relaxed">
+              <h3 className="text-[9px] md:text-[10px] font-black text-brand-red uppercase tracking-[0.2em] md:tracking-[0.3em] mb-4 bg-brand-red/10 px-3 py-1 rounded-full">
+                {pillar.label}
+              </h3>
+              <p className="text-xs md:text-sm font-bold text-slate-950 group-hover:text-white leading-relaxed">
                 {pillar.text}
               </p>
               {pillar.details && (
@@ -438,9 +440,9 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
   );
 
   const renderInvestment = () => (
-    <div className="px-8 py-12 space-y-8">
+    <div className="px-4 md:px-8 py-8 md:py-12 space-y-6 md:space-y-8">
       {renderStats()}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
         {Array.isArray(slide.content) && slide.content.map((item: any, i: number) => (
           <motion.div
             key={i}
@@ -448,37 +450,37 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.15 }}
             className={clsx(
-              "rounded-3xl p-8 border hover:scale-105 transition-transform duration-500",
+              "rounded-[2rem] p-6 md:p-8 border md:hover:scale-105 transition-transform duration-500",
               i === 0 ? "bg-white border-slate-100" : 
               i === 1 ? "bg-slate-950 border-brand-red shadow-2xl" : "bg-slate-50 border-slate-200"
             )}
           >
             <p className={clsx(
-              "text-[10px] font-black uppercase tracking-[0.3em] mb-8",
+              "text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] mb-6 md:mb-8",
               i === 1 ? "text-slate-500" : "text-slate-400"
             )}>
               Asignación 0{(i + 1).toString()}
             </p>
             <h3 className={clsx(
-              "text-2xl font-black mb-6 tracking-tight",
+              "text-xl md:text-2xl font-black mb-4 md:mb-6 tracking-tight uppercase",
               i === 1 ? "text-white" : "text-slate-950"
             )}>
               {item.label}
             </h3>
             <p className={clsx(
-              "text-sm font-medium leading-relaxed mb-8",
+              "text-xs md:text-sm font-medium leading-relaxed mb-6 md:mb-8",
               i === 1 ? "text-slate-400" : "text-slate-500"
             )}>
               {item.text}
             </p>
             <div className="flex items-center justify-between">
                <div className={clsx(
-                 "px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest",
+                 "px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[8px] md:text-[10px] font-black uppercase tracking-widest",
                  i === 1 ? "bg-brand-red text-white" : "bg-slate-100 text-slate-500"
                )}>
-                 Estado: Activo
+                 Activo 2026
                </div>
-               <TrendingUp size={24} className={i === 1 ? "text-brand-red" : "text-slate-200"} />
+               <TrendingUp size={20} className={i === 1 ? "text-brand-red" : "text-slate-200"} />
             </div>
           </motion.div>
         ))}
@@ -487,28 +489,30 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
   );
 
   const renderMachinery = () => (
-    <div className="px-8 py-12 space-y-12">
+    <div className="px-4 md:px-8 py-8 md:py-12 space-y-8 md:space-y-12">
       {renderStats()}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
         {Array.isArray(slide.content) && slide.content.map((item: any, i: number) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex bg-white rounded-3xl border border-slate-100 overflow-hidden hover:border-brand-red transition-all group"
+            className="flex bg-white rounded-2xl md:rounded-[2rem] border border-slate-100 overflow-hidden hover:border-brand-red transition-all group shadow-sm hover:shadow-xl"
           >
-            <div className="w-2 bg-slate-100 group-hover:bg-brand-red transition-colors" />
-            <div className="p-8 flex flex-col justify-center flex-1">
-              <div className="flex items-center gap-4 mb-4">
-                 <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-brand-red group-hover:text-white transition-all">
+            <div className="w-1.5 md:w-2 bg-slate-100 group-hover:bg-brand-red transition-colors shrink-0" />
+            <div className="p-5 md:p-8 flex flex-col justify-center flex-1">
+              <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                 <div className="w-9 h-9 md:w-10 md:h-10 bg-slate-50 rounded-lg md:rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-brand-red group-hover:text-white transition-all shrink-0">
                     {(() => {
                       const ContextIcon = getContextualIcon(item.label, Users);
-                      return <ContextIcon size={18} />;
+                      return <ContextIcon size={16} className="md:size-[18px]" />;
                     })()}
                  </div>
-                 <h3 className="text-xl font-black text-slate-950 uppercase tracking-tight leading-none">{item.label}</h3>
+                 <h3 className="text-base md:text-lg font-black text-slate-950 uppercase tracking-tight leading-tight">
+                   {item.label}
+                 </h3>
               </div>
-              <p className="text-slate-500 font-medium leading-relaxed">{item.text}</p>
+              <p className="text-xs md:text-sm text-slate-500 font-medium leading-relaxed">{item.text}</p>
             </div>
           </motion.div>
         ))}
@@ -517,38 +521,38 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
   );
 
   const renderVideoGrid = () => (
-    <div className="px-8 py-12 space-y-12">
+    <div className="px-4 md:px-8 py-8 md:py-12 space-y-8 md:space-y-12">
       {renderStats()}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
         {Array.isArray(slide.content) && slide.content.map((video: any, i: number) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="aspect-video bg-slate-950 rounded-[40px] border border-slate-800 shadow-2xl relative group overflow-hidden"
+            className="aspect-video bg-slate-950 rounded-3xl md:rounded-[40px] border border-slate-800 shadow-2xl relative group overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent" />
             
             {/* Play Button - Moved to corner to avoid clashing with text */}
-            <div className="absolute top-6 right-6 z-20">
+            <div className="absolute top-4 md:top-6 right-4 md:right-6 z-20">
                <motion.div 
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center shadow-2xl cursor-pointer hover:bg-brand-red hover:border-brand-red transition-all duration-300"
+                className="w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center shadow-2xl cursor-pointer hover:bg-brand-red hover:border-brand-red transition-all duration-300"
                >
-                 <Video size={18} className="text-white" />
+                 <Video size={16} className="md:size-[18px] text-white" />
                </motion.div>
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
-               <div className="flex items-center gap-3 mb-3">
-                  <div className="px-3 py-1 bg-brand-red/90 rounded text-[9px] font-black text-white uppercase tracking-[0.2em] shadow-lg shadow-brand-red/20">Pauta Mayo</div>
-                  <div className="text-[9px] font-black text-white/40 uppercase tracking-[0.2em]">{video.label}</div>
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
+               <div className="flex items-center gap-3 mb-2 md:mb-3">
+                  <div className="px-2 py-0.5 md:px-3 md:py-1 bg-brand-red/90 rounded text-[8px] md:text-[9px] font-black text-white uppercase tracking-[0.2em] shadow-lg shadow-brand-red/20 uppercase tracking-widest">Pauta Mayo</div>
+                  <div className="text-[8px] md:text-[9px] font-black text-white/40 uppercase tracking-[0.2em]">{video.label}</div>
                </div>
-               <h3 className="text-2xl font-black text-white tracking-tight leading-tight mb-2 max-w-lg">
+               <h3 className="text-xl md:text-2xl font-black text-white tracking-tight leading-tight mb-2 max-w-lg uppercase">
                  {video.text}
                </h3>
-               <div className="w-16 h-1 bg-brand-red mt-4 opacity-80" />
+               <div className="w-12 md:w-16 h-1 bg-brand-red mt-3 md:mt-4 opacity-80" />
             </div>
           </motion.div>
         ))}
@@ -557,29 +561,29 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
   );
 
   const renderRoadmap = () => (
-    <div className="px-8 py-12 space-y-16 relative">
+    <div className="px-4 md:px-8 py-8 md:py-12 space-y-12 md:space-y-16 relative">
       {renderStats()}
       <div className="absolute top-48 bottom-24 left-1/2 w-0.5 bg-slate-100 -translate-x-1/2 hidden lg:block" />
-      <div className="space-y-24 relative z-10">
+      <div className="space-y-12 md:space-y-24 relative z-10">
         {Array.isArray(slide.content) && slide.content.map((phase: any, i: number) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             className={clsx(
-              "flex flex-col lg:flex-row items-center gap-12",
+              "flex flex-col lg:flex-row items-center gap-6 md:gap-12",
               i % 2 !== 0 ? "lg:flex-row-reverse" : ""
             )}
           >
             <div className="lg:w-1/2 flex flex-col items-center lg:items-end text-center lg:text-right">
                <div className={clsx(
-                 "w-16 h-16 rounded-3xl flex items-center justify-center mb-6 shadow-xl",
+                 "w-12 h-12 md:w-16 md:h-16 rounded-2xl md:rounded-3xl flex items-center justify-center mb-4 md:mb-6 shadow-xl",
                  i === 0 ? "bg-brand-red text-white" : "bg-slate-100 text-slate-400"
                )}>
-                 <span className="text-2xl font-black">{i + 1}</span>
+                 <span className="text-xl md:text-2xl font-black">{i + 1}</span>
                </div>
-               <h3 className="text-3xl font-black text-slate-950 mb-4 tracking-tighter uppercase">{phase.label}</h3>
-               <p className="text-slate-500 font-medium text-lg leading-relaxed max-w-md">
+               <h3 className="text-2xl md:text-3xl font-black text-slate-950 mb-3 md:mb-4 tracking-tighter uppercase">{phase.label}</h3>
+               <p className="text-slate-500 font-medium text-base md:text-lg leading-relaxed max-w-md">
                  {phase.text}
                </p>
             </div>
@@ -588,6 +592,58 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
             </div>
             <div className="lg:w-1/2" />
           </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+
+  const renderWorkflow = () => (
+    <div className="px-4 md:px-8 py-8 md:py-12 relative">
+      <div className="grid grid-cols-1 gap-6 relative">
+        {Array.isArray(slide.content) && slide.content.map((step: any, i: number) => (
+          <div key={i} className="relative flex flex-col md:flex-row items-center gap-6 group">
+            {/* Step Number & Line */}
+            <div className="flex flex-col items-center shrink-0">
+              <div className="w-12 h-12 rounded-full bg-slate-900 border-4 border-slate-800 flex items-center justify-center text-white font-black text-xl z-10 shadow-xl group-hover:bg-brand-red group-hover:border-brand-red/30 transition-all">
+                {i + 1}
+              </div>
+              {i < (slide.content as any[]).length - 1 && (
+                <div className="w-1 h-32 md:h-12 bg-gradient-to-b from-slate-200 to-slate-100 my-2 rounded-full" />
+              )}
+            </div>
+
+            {/* Content Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.1 }}
+              className="flex-1 bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-xl transition-all w-full md:w-auto"
+            >
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                  <h3 className="text-xl md:text-2xl font-black text-slate-950 uppercase tracking-tight mb-2">
+                    {step.label}
+                  </h3>
+                  <p className="text-sm md:text-base text-slate-500 font-medium leading-relaxed italic">
+                    {step.text}
+                  </p>
+                </div>
+                <div className="shrink-0">
+                  <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-300 group-hover:bg-brand-red/10 group-hover:text-brand-red transition-all">
+                    {(() => {
+                      const ContextIcon = getContextualIcon(step.label, Activity);
+                      return <ContextIcon size={24} />;
+                    })()}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Connecting Arrow for Desktop (Optional but looks cool) */}
+            {i < (slide.content as any[]).length - 1 && (
+              <div className="hidden md:block absolute left-6 top-[80px] h-[calc(100%-80px)] w-0.5 border-l-2 border-dashed border-slate-200" />
+            )}
+          </div>
         ))}
       </div>
     </div>
@@ -608,8 +664,12 @@ export default function SlideLayout({ slide }: SlideLayoutProps) {
       case 'machinery':
         return renderMachinery();
       case 'plan':
-        if (slide.title.toLowerCase().includes('roadmap')) {
+        const titleLower = slide.title.toLowerCase();
+        if (titleLower.includes('roadmap')) {
           return renderRoadmap();
+        }
+        if (titleLower.includes('flujo') || titleLower.includes('ciclo') || titleLower.includes('círculo') || titleLower.includes('cadena')) {
+          return renderWorkflow();
         }
         return renderMachinery();
       case 'video':

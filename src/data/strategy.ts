@@ -61,25 +61,25 @@ export const GENERAL_DIRECTIVES: SlideContent[] = [
     id: 'general-slide-4',
     type: 'target',
     group: 'ESTRATEGIA MAESTRA',
-    title: 'EL TARGET: ARQUETIPOS DE VOTANTES',
-    subtitle: 'A quién le hablamos: Los ciudadanos que deciden la elección',
-    strategicContext: 'No le hablamos a "todo Talara" por igual. Hemos dividido a la gente en grupos según lo que les preocupa. Así, cuando Arnulfo habla, cada persona siente que le está hablando directamente a ella.',
+    title: 'EL TARGET Y NUESTRA OFERTA REAL',
+    subtitle: 'Transformaciones de Vida basadas en la Matriz 2026-2031',
+    strategicContext: 'Jefa, ya no vendemos "apps" o tecnología por tecnología. Vendemos soluciones a los Dolores que quitan el sueño a los talareños. Cada arquetipo tiene una Oferta Real que Arnulfo garantiza.',
     stats: [
       { label: 'Población Objetivo', value: '45k', trend: 'up' },
       { label: 'Indecisión Estimada', value: '38%', trend: 'down' }
     ],
     content: [
       {
-        label: 'La Madre Protectora',
-        text: 'Enfoque: Seguridad y Salud. Prioridad en Negritos y zonas críticas.',
+        label: '1. La Madre Protectora (30-55 años)',
+        text: 'Dolor: Colapso del desagüe y falta de agua. Oferta: Agua 24/7 (95% cobertura) y construcción de la Planta de Tratamiento (PTAR) para acabar con los aniegos.',
       },
       {
-        label: 'El Joven Desencantado',
-        text: 'Enfoque: Educación y Empleo. TikTok es el canal de conexión principal.',
+        label: '2. El Joven Desencantado (18-28 años)',
+        text: 'Dolor: Falta de certificación y espacios. Oferta: 40% de egresados con certificación técnica y creación de 5 Centros de Desarrollo Juvenil estratégicos.',
       },
       {
-        label: 'El Trabajador/Pescador',
-        text: 'Enfoque: Anticorrupción y Economía. Contacto directo y pragmático.',
+        label: '3. El Trabajador/Pescador (35-60 años)',
+        text: 'Dolor: Abandono productivo y contaminación. Oferta: Talara Emprende (1,000 MYPES) y Modernización de Desembarcaderos.',
       },
     ],
   },
@@ -243,6 +243,28 @@ export const GENERAL_DIRECTIVES: SlideContent[] = [
     ],
   },
   {
+    id: 'general-slide-daily-ops',
+    type: 'plan',
+    group: 'GESTIÓN Y COMITÉ',
+    title: 'EL TRABAJO DIARIO (HISTORIAS)',
+    subtitle: 'Manejado por la Secretaría de Comunicaciones (Editores)',
+    strategicContext: 'Jefa, esta es la "Ley de Campo" para el equipo de Prensa. No se trata de hacer arte, se trata de estar presentes en el celular del votante las 24 horas con un flujo que genere confianza y sensación de triunfo.',
+    content: [
+      {
+        label: 'Mañanas: El Despertar de Talara',
+        text: 'Foto de Arnulfo o el equipo en la calle/mercado con un volante QR. Texto: "Empezando temprano por Talara". Genera sensación de trabajo duro.',
+      },
+      {
+        label: 'Tardes: Nutrición de Propuestas',
+        text: 'Reposteo de las notas creadas en el "Centro de Noticias" de nuestra web SIM. Llevamos tráfico a nuestra casa digital.',
+      },
+      {
+        label: 'Noches: El Tren Ganador',
+        text: 'Capturas de la plataforma SIM mostrando cómo crece el número de simpatizantes (borrando datos sensibles). Nadie quiere votar por un perdedor.',
+      },
+    ],
+  },
+  {
     id: 'general-slide-7',
     type: 'investment',
     group: 'INVERSIÓN',
@@ -353,33 +375,192 @@ export const GENERAL_DIRECTIVES: SlideContent[] = [
   },
 ];
 
+export const OPERATIONAL_PROTOCOLS: SlideContent[] = [
+  {
+    id: 'op-slide-1',
+    type: 'diagnosis',
+    group: 'SINERGIA',
+    title: 'LA CADENA DE TRABAJO (QUIÉN HACE QUÉ)',
+    subtitle: 'División por Grupos: Cerebro vs. Fuerza de Campo',
+    strategicContext: 'Jefa, para que todo funcione como un reloj, dividiremos el trabajo en dos grupos claros. El equipo de Estrategia (nosotros) y el equipo de Apoyo (las Secretarías).',
+    content: [
+      {
+        label: 'Tradicional (Pies y Manos)',
+        text: 'Las Secretarías: Su trabajo es la calle. Hablar, repartir volantes y llevar gente. Ellos NO graban ni editan.',
+      },
+      {
+        label: 'Estrategia (Cerebro e Imagen)',
+        text: 'Wilmer y Arnulfo: Wilmer es el único que graba, edita y maneja el SIM. Arnulfo es la voz y el rostro oficial.',
+      },
+    ],
+  },
+  {
+    id: 'op-slide-2',
+    type: 'plan',
+    group: 'SINERGIA',
+    title: 'SINERGIA: EL CÍRCULO VICTORIOSO (FLUJO)',
+    subtitle: 'De la Grabación a la Captura del Dato',
+    strategicContext: 'Jefa, así funciona el engranaje: Wilmer graba un video potente, las Secretarías lo llevan a la calle en los volantes QR, el vecino se registra y la Secretaría de la Mujer lo recibe con cariño en WhatsApp. El ciclo se cierra: capturamos al votante y no lo soltamos.',
+    content: [
+      { label: '1. Producción', text: 'Wilmer graba video potente de Arnulfo (Ej. Negritos).' },
+      { label: '2. Despliegue', text: 'Organización y Juventudes salen a la calle con volantes QR.' },
+      { label: '3. Captura', text: 'El vecino ve el video en su celular y se registra en el SIM.' },
+      { label: '4. Recepción', text: 'Secretaría de la Mujer los recibe en el WhatsApp oficial.' },
+      { label: '5. Victoria', text: 'El Círculo se cierra: El video lo trajo, el equipo lo mantiene.' },
+    ],
+  },
+  {
+    id: 'op-slide-sec-1',
+    type: 'machinery',
+    group: 'MANUAL DE TAREAS',
+    title: '1. ORGANIZACIÓN (El que cuida los grupos)',
+    subtitle: 'Misión: Que nadie se quede sentado',
+    content: [
+      {
+        label: 'Reparto de Paquetes',
+        text: 'Recibir los volantes y entregárselos a los muchachos que salen a caminar.',
+      },
+      {
+        label: 'Guía de Campo',
+        text: 'Llevar a los grupos de gente a los mercados y plazas de Talara.',
+      },
+      {
+        label: 'Lista de Amigos',
+        text: 'Anotar en un papel el nombre de los que ayudan cada día para saber que cumplen.',
+      },
+      {
+        label: 'Control de QR',
+        text: 'Asegurarse de que todos estén repartiendo los papelitos con el "dibujo cuadradito" (QR).',
+      },
+    ],
+  },
+  {
+    id: 'op-slide-sec-2',
+    type: 'machinery',
+    group: 'MANUAL DE TAREAS',
+    title: '2. PRENSA Y COMUNICACIÓN (El que avisa)',
+    subtitle: 'Misión: Apoyo Logístico a la Imagen',
+    content: [
+      {
+        label: 'Silencio en Grabación',
+        text: 'Acompañar a Wilmer y Arnulfo y pedirle a la gente que guarde silencio un ratito al grabar.',
+      },
+      {
+        label: 'Carga de Equipos',
+        text: 'Cargar las luces o el trípode que Wilmer necesite para que los videos salgan bonitos.',
+      },
+      {
+        label: 'Ruta de Radios',
+        text: 'Ir a las radios locales a dejar un papelito con las noticias de Arnulfo de la semana.',
+      },
+    ],
+  },
+  {
+    id: 'op-slide-sec-3',
+    type: 'machinery',
+    group: 'MANUAL DE TAREAS',
+    title: '3. JUVENTUDES (Muchachos con energía)',
+    subtitle: 'Misión: Banderas y Tecnología en la Calle',
+    content: [
+      {
+        label: 'Banderazo de Barrio',
+        text: 'Ponerse su polo del partido y caminar por los barrios con nuestras banderas.',
+      },
+      {
+        label: 'Maestros del QR',
+        text: 'Enseñar a la gente mayor cómo poner su teléfono frente al "dibujo cuadradito" (QR) para ver el video.',
+      },
+      {
+        label: 'Muro Amigo',
+        text: 'Pedir permiso en las casas de los amigos para pegar un afiche en la puerta o ventana.',
+      },
+    ],
+  },
+  {
+    id: 'op-slide-sec-4',
+    type: 'machinery',
+    group: 'MANUAL DE TAREAS',
+    title: '4. MUJER Y ASUNTOS SOCIALES (Las señoras)',
+    subtitle: 'Misión: La Conversación que Convence',
+    content: [
+      {
+        label: 'Visita de Vecinas',
+        text: 'Contar a las mamás en comedores que Arnulfo va a arreglar el problema del agua.',
+      },
+      {
+        label: 'Cariño en WhatsApp',
+        text: 'Estar atentas al celular para responder con palabras cariñosas a los que preguntan por el SIM.',
+      },
+      {
+        label: 'Tardes de Cafecito',
+        text: 'Organizar reuniones en casas para que Arnulfo converse con 5 o 10 mamás del barrio.',
+      },
+    ],
+  },
+  {
+    id: 'op-slide-sec-5',
+    type: 'machinery',
+    group: 'MANUAL DE TAREAS',
+    title: '5. ASUNTOS ELECTORALES (Cuidar los votos)',
+    subtitle: 'Misión: Orden y Vigilancia',
+    content: [
+      {
+        label: 'Limpieza de Listas',
+        text: 'Mirar la lista que Wilmer saca del SIM y avisar si alguien vive en otro sitio o los datos están mal.',
+      },
+      {
+        label: 'Búsqueda de Valientes',
+        text: 'Buscar personas de mucha confianza para que cuenten los votos el día de la elección.',
+      },
+    ],
+  },
+  {
+    id: 'op-slide-sec-6',
+    type: 'machinery',
+    group: 'MANUAL DE TAREAS',
+    title: '6. ECONOMÍA (El que guarda las cuentas)',
+    subtitle: 'Misión: Cuidar cada Solcito',
+    content: [
+      {
+        label: 'Libro de Gastos',
+        text: 'Anotar en un cuaderno cada solcito que gastamos (volantes, pasajes, cafés).',
+      },
+      {
+        label: 'Papelito manda',
+        text: 'Pedir siempre un recibo o boleta de todo lo que compramos para que Arnulfo sepa en qué se invierte.',
+      },
+    ],
+  },
+];
+
+
 export const MONTHLY_TACTICAL_PLANS: MonthStrategy[] = [
   {
     month: 'Mayo',
     year: 2026,
     slides: [
       {
-    id: 'mayo-2026-slide-8',
-    type: 'plan',
-    title: 'OBJETIVO DEL MES: MAYO',
-    subtitle: 'Fase 1: Posicionamiento de Choque ("Top of Mind")',
-    strategicContext: 'Este mes el objetivo no es convencer, sino que nos CONOZCAN. Queremos que cuando alguien piense en Arnulfo, piense en alguien que va a poner orden.',
-    stats: [
-          { label: 'Efectividad Mensual', value: '78%', trend: 'up' },
-          { label: 'Alcance Orgánico', value: '15k', trend: 'up' }
+        id: 'mayo-2026-slide-8',
+        type: 'plan',
+        title: 'OBJETIVO DEL MES: MAYO',
+        subtitle: 'OP. ENGRANAJE: Posicionamiento y Captura de Datos',
+        strategicContext: 'Jefa, este mes operamos bajo la "Regla de Oro": Todo contenido, por más bonito que sea, solo sirve si nos trae el nombre y teléfono del votante a la web (SIM) para capturar el dato. Estamos engranando la indignación con nuestra solución tecnológica.',
+        stats: [
+          { label: 'Presupuesto Pauta', value: 'S/ 200', trend: 'up' },
+          { label: 'Regla de Oro', value: 'Data/SIM', trend: 'up' }
         ],
         content: [
           { 
-            label: 'Concepto: Autoridad', 
-            text: 'Asociar a Arnulfo Neira con la mano dura contra la delincuencia en Talara.' 
+            label: 'Enfoque: Rescate Ambiental', 
+            text: 'Golpear la indignación sobre el colapso de agua y desagüe para ofrecer la PTAR como solución.' 
           },
           { 
-            label: 'Concepto: Rescate', 
-            text: 'Posicionar el Plan de Rescate ante el desastre ambiental y sanitario.' 
+            label: 'Enfoque: Revolución Económica', 
+            text: 'Captar al sector emprendedor y pesquero con el plan "Talara Emprende" y modernización de desembarcaderos.' 
           },
           { 
-            label: 'Estrategia Viral', 
-            text: 'Generar impacto visual crudo en locaciones emblemáticas (Colegio Pardo, Mercados).' 
+            label: 'Enfoque: Seguridad Estructural', 
+            text: 'Diferenciarnos de parches tecnológicos: Proponer Centros de Desarrollo Juvenil para atacar la raíz del crimen.' 
           }
         ],
       },
@@ -387,41 +568,45 @@ export const MONTHLY_TACTICAL_PLANS: MonthStrategy[] = [
         id: 'mayo-2026-calendar',
         type: 'calendar',
         group: 'EJECUCIÓN',
-        title: 'PLANIFICADOR TÁCTICO: MAYO 2026',
-        subtitle: 'Calendario Interactivo de Publicaciones y Pauta',
+        title: 'CALENDARIO DE CONTENIDOS: MAYO',
+        subtitle: 'Parrilla Táctica - Operación Engranaje',
         stats: [
-          { label: 'Post Feed', value: '16', trend: 'up' },
-          { label: 'Pauta Pardo', value: 'S/ 200', trend: 'up' }
+          { label: 'Frecuencia', value: '4/Semana', trend: 'up' },
+          { label: 'Pauta Lunes', value: 'S/ 50.00', trend: 'up' }
         ],
         calendarData: [
-          { day: 4, title: 'La Bomba de Tiempo', type: 'Video Pautado', description: 'Impacto en indignación de "La Madre Protectora". Locación: Colegio José Pardo.', pauta: 'S/ 25' },
-          { day: 6, title: '¿Qué es el Botón de Pánico?', type: 'Infografía', description: 'Carrusel estético explicando el funcionamiento de la app de seguridad.' },
-          { day: 8, title: 'Mercado de Pariñas', type: 'Reel/TikTok', description: 'Arnulfo escuchando sin filtro a los vecinos. Formato crudo y empático.' },
-          { day: 10, title: 'Unete al Plan', type: 'Conversión', description: 'Flyer digital directo pidiendo registro en la web SIM.' },
+          // SEMANA 1 (4 al 10 de Mayo): Rescate Ambiental y Saneamiento
+          { day: 4, title: 'Agua Digna y Mar Limpio', type: 'Video Pautado', description: 'Arnulfo frente a un aniego. Meta: 95% agua y PTAR. Pilar: Solución (MOFU).', pauta: 'S/ 50' },
+          { day: 6, title: 'Tolerancia Cero Contaminación', type: 'Gráfica', description: 'Remediación de 5,000 ha de pasivos y erradicación de botaderos. Pilar: Autoridad (TOFU).' },
+          { day: 8, title: 'El Desastre en la Calle', type: 'Reel/TikTok', description: 'Cámara en mano en zonas vulneras exponiendo urgencia de drenajes. Pilar: Empatía.' },
+          { day: 10, title: 'Súmate al Rescate', type: 'Conversión', description: 'Link directo al SIM. Mensaje: "La solución empieza aquí. Regístrate". Pilar: Respuesta Directa.' },
           
-          { day: 11, title: 'Chamba sin Vara', type: 'Video Pautado', description: 'Instituto Tecnológico Pesquero. Captando al joven desencantado.', pauta: 'S/ 25' },
-          { day: 13, title: 'Burocracia vs SIM', type: 'Gráfica', description: 'Explicando el fin de las coimas con procesos digitales.' },
-          { day: 15, title: 'Testimonio Joven', type: 'Reel/TikTok', description: 'Joven talareño hablando de la falta de oportunidades.' },
-          { day: 17, title: 'Talara Emprende', type: 'Lanzamiento', description: 'Pre-inscripción para emprendedores locales en el SIM.' },
+          // SEMANA 2 (11 al 17 de Mayo): Revolución Económica
+          { day: 11, title: 'Talara Emprende', type: 'Video Pautado', description: 'Lanzamiento del programa provincial. MYPES sin petróleo. Pilar: Solución (MOFU).', pauta: 'S/ 50' },
+          { day: 13, title: 'Dignidad al Pescador', type: 'Carrusel', description: 'Centros de Desarrollo Productivo en Pesca y modernización. Pilar: Autoridad (TOFU).' },
+          { day: 15, title: 'La Voz del Trabajador', type: 'Reel/TikTok', description: 'Testimonio de comerciante validando estancamiento y compromiso. Pilar: Prueba Social.' },
+          { day: 17, title: '¿Eres Emprendedor?', type: 'Conversión', description: '"Se acabaron las trabas. Conoce el plan y preinscríbete". Link directo al SIM. Pilar: Respuesta Directa.' },
 
-          { day: 18, title: 'Resumen Volantes QR', type: 'Video Orgánico', description: 'Entrega de material físico y escaneo masivo en mercados.' },
-          { day: 20, title: 'Planta Coreana de Agua', type: 'Video Didáctico', description: 'Arnulfo explicando la solución técnica definitiva al agua.' },
-          { day: 22, title: 'Frente a lo Tradicional', type: 'Reel/TikTok', description: 'Mensaje frontal: "Tenemos un plan, ellos solo regalan polos".' },
-          { day: 24, title: 'Mapa Interactivo', type: 'Interactivo', description: 'Mira qué haremos en tu calle. Navegación directa en el portal.' },
+          // SEMANA 3 (18 al 24 de Mayo): Seguridad y Juventud
+          { day: 18, title: 'La Raíz del Problema', type: 'Video Pautado', description: '5 Centros de Desarrollo Juvenil vs parches tecnológicos fallidos. Pilar: Solución (MOFU).', pauta: 'S/ 50' },
+          { day: 20, title: 'Educación que da Trabajo', type: 'Gráfica', description: 'Infografía meta: 40% egresados con certificación técnica. Pilar: Autoridad (TOFU).' },
+          { day: 22, title: 'En el Barrio', type: 'Reel/TikTok', description: 'Conversando con madres sobre delincuencia. Escucha activa. Pilar: Empatía.' },
+          { day: 24, title: 'Únete a la Fuerza Joven', type: 'Conversión', description: 'Llamado a jóvenes 18-30 para inscribirse como voluntarios digitales en el SIM. Pilar: Respuesta Directa.' },
 
-          { day: 25, title: 'Acción en La Brea', type: 'Video Orgánico', description: 'Entrevista a Carlos sobre acciones de emergencia local.' },
-          { day: 27, title: 'Firma de Compromiso', type: 'Transparencia', description: 'Compromiso de publicar el 100% de los gastos en el SIM.' },
-          { day: 29, title: 'Turismo Máncora', type: 'Reel/TikTok', description: 'Abandono actual vs Inversión proyectada en el eje turístico.' },
-          { day: 31, title: 'Cierre y Misión Junio', type: 'Video Cierre', description: 'Agradecimiento y nueva meta para la Comunidad de WhatsApp.' }
+          // SEMANA 4 (25 al 31 de Mayo): Municipio Moderno
+          { day: 25, title: 'Fin de la Burocracia', type: 'Video Pautado', description: 'Digitalización 100% de servicios (TUPA) para eliminar coimas. Pilar: Solución (MOFU).', pauta: 'S/ 50' },
+          { day: 27, title: 'Transparencia Total', type: 'Contraste', description: 'Meta: Publicar 100% de gastos vs gestión cerrada. Pilar: Autoridad (TOFU).' },
+          { day: 29, title: 'Resumen del Mes', type: 'Video Cierre', description: 'Behind the Scenes ágil: entrega de volantes QR y visitas críticas. Pilar: Prueba Social.' },
+          { day: 31, title: 'El Batallón Digital Crece', type: 'Celebración', description: 'Celebrando registros obtenidos y empuje final: "Faltas tú". Pilar: Respuesta Directa.' }
         ],
         content: [
           {
-            label: 'Operación Diaria',
-            text: '2 Historias diarias (Behind the Scenes) operadas por el equipo de prensa con celular en mano.',
+            label: 'Regla de Oro',
+            text: 'Todo contenido debe derivar tráfico a la web (SIM) para capturar el dato.',
           },
           {
-            label: 'Regla de Oro',
-            text: 'Cada post debe incluir un Call to Action (CTA) directo al registro en el SIM.',
+            label: 'Frecuencia Estratégica',
+            text: '4 Publicaciones en Feed/Reels por semana + Historias de campo diarias.',
           }
         ]
       },
@@ -429,60 +614,66 @@ export const MONTHLY_TACTICAL_PLANS: MonthStrategy[] = [
         id: 'mayo-2026-stories',
         type: 'plan',
         group: 'EJECUCIÓN',
-        title: 'ESTRATEGIA DIARIA (STORIES)',
-        subtitle: 'Conexión Orgánica y Detrás de Cámaras',
+        title: 'TRABAJO DIARIO (STORIES)',
+        subtitle: 'Gestión de Secretaría de Comunicaciones',
+        strategicContext: 'Jefa, las historias no necesitan diseño pro, necesitan REALIDAD. El objetivo es que la gente vea que Arnulfo está en la calle mientras los otros están en sus oficinas.',
         stats: [
-          { label: 'Historias/Día', value: '2 Min.', trend: 'up' },
-          { label: 'Canales', value: 'IG/FB/WA', trend: 'up' }
+          { label: 'Mañana', value: 'QR/Calle', trend: 'up' },
+          { label: 'Noche', value: 'Tren Ganador', trend: 'up' }
         ],
         content: [
           {
-            label: 'La Regla de Oro',
-            text: 'CERO posteos muertos. Cada historia debe llevar un enlace al SIM o invitar a comentar.',
+            label: 'Mañanas (Calle/Mercado)',
+            text: 'Foto de Arnulfo o el equipo en la calle con un volante QR. Texto: "Empezando temprano por Talara".',
           },
           {
-            label: 'Contenido Crudo',
-            text: 'No requiere diseño. Arnulfo respondiendo preguntas rápidas o reuniones vecinales.',
+            label: 'Tardes (Noticias SIM)',
+            text: 'Reposteo de las notas creadas en el "Centro de Noticias" de nuestra web oficial SIM.',
           },
           {
-            label: 'WhatsApp Status',
-            text: 'Uso crítico de los estados para movilizar a la Comunidad de WhatsApp.',
+            label: 'Noches (Tren Ganador)',
+            text: 'Capturas del crecimiento del SIM (datos borrados) para generar urgencia de pertenencia.',
           },
         ],
       },
       {
         id: 'mayo-2026-slide-9',
         type: 'video',
-        title: 'PRODUCCIÓN AUDIOVISUAL DEL MES',
-        subtitle: 'Pauta Digital Estratégica para Mayo',
+        title: 'PRODUCCIÓN AUDIOVISUAL: MAYO',
+        subtitle: 'Inversión Total Mensual: S/ 200',
+        strategicContext: 'Pautamos S/ 50 cada lunes para asegurar que el mensaje de "Solución" llegue a todo Talara. No tiramos la plata, la invertimos en bases de datos.',
         content: [
           {
-            label: 'Video 1: Ataque al Dolor',
-            text: '"La Bomba de Tiempo en Negritos". Colegio José Pardo. Dirigido a Madres (FB).',
+            label: 'Semana 1: Saneamiento',
+            text: '"Agua Digna y Mar Limpio". Arnulfo exponiendo meta de 95% cobertura.',
           },
           {
-            label: 'Video 2: Solución Tecnológica',
-            text: '"El Botón de Pánico Talara". Demostración de la APP. Público general (FB/TT).',
+            label: 'Semana 2: Empleo MYPE',
+            text: '"Talara Emprende". Programa provincial para formalizar 1,000 MYPES.',
+          },
+          {
+            label: 'Semana 3: Seguridad',
+            text: '"La Raíz del Problema". Centros de Desarrollo Juvenil para bajar el crimen.',
+          },
+          {
+            label: 'Semana 4: Gestión',
+            text: '"El Fin de la Burocracia". Digitalización total del TUPA para matar la coima.',
           },
         ],
       },
       {
         id: 'mayo-2026-slide-10',
         type: 'machinery',
-        title: 'DESPLIEGUE FÍSICO DEL MES',
-        subtitle: 'La Calle: Captura de Datos en Mercados',
+        title: 'OPERACIÓN TERRESTRE (MAY)',
+        subtitle: 'Captura de Datos QR en Mercados',
         content: [
           {
-            label: 'Volantes de Captura',
-            text: 'Primeros impresos con código QR vinculado directamente al SIM.',
+            label: 'Volante QR Rescate',
+            text: 'Enfoque ambiental para capturar votos en zonas sin agua.',
           },
           {
-            label: 'Flyer 1: Rescate Sanitario',
-            text: 'Acción específica para La Brea con enfoque en salud pública.',
-          },
-          {
-            label: 'Flyer 2: Talara Emprende',
-            text: 'Captura de jóvenes emprendedores para la base de datos.',
+            label: 'Volante QR Emprende',
+            text: 'Enfoque en comerciantes y jóvenes para integrarlos al SIM.',
           },
         ],
       },
@@ -490,29 +681,25 @@ export const MONTHLY_TACTICAL_PLANS: MonthStrategy[] = [
         id: 'mayo-2026-slide-11',
         type: 'plan',
         group: 'RESULTADOS',
-        title: 'METAS Y KPIs DE MAYO',
-        subtitle: 'Lo que vamos a medir al 31 de Mayo',
+        title: 'METAS "OPERACIÓN ENGRANAJE"',
+        subtitle: 'Lo que vamos a medir al cierre de Mayo',
         stats: [
-          { label: 'Eficiencia de Gasto', value: '92%', trend: 'up' },
-          { label: 'Costo por Registro', value: 'S/ 0.40', trend: 'down' }
+          { label: 'Eficiencia Gasto', value: '100%', trend: 'up' },
+          { label: 'Tasa Conversión', value: 'Alta', trend: 'up' }
         ],
         content: [
           { 
-            label: 'Captación SIM', 
-            text: 'Impacto directo: 1,000 simpatizantes registrados y validados en el sistema.' 
+            label: 'Registros SIM', 
+            text: 'Mínimo 1,000 nuevos simpatizantes con perfiles validados.' 
           },
           { 
-            label: 'Estructura Electoral', 
-            text: 'Activación de 50 voluntarios reales capacitados en el uso del SIM móvil.' 
+            label: 'Activismo Digital', 
+            text: 'Consolidación de la base de jóvenes (18-30) para defensa en junio.' 
           },
           { 
-            label: 'Comunidad Digital', 
-            text: 'Consolidación de 500 miembros activos en el canal oficial de WhatsApp.' 
-          },
-          { 
-            label: 'Alcance Video', 
-            text: '20,000 reproducciones mínimas de los videos estratégicos de choque.' 
-          },
+            label: 'Dominio de Agenda', 
+            text: 'Hacer que el "colapso de agua" sea el tema central, con la PTAR como única salida.' 
+          }
         ],
       },
     ],
